@@ -33,8 +33,10 @@ document.ready(
     // toggleTheme function.
     // this script shouldn't be changed.
     function () {
+         window.localStorage.setItem('theme', 'dark',)
+
         document.getElementsByTagName('body')[0].classList.add('dark-theme');
-        // mobile
+        
         document.getElementById("mobile-toggle-theme").innerText = "· Dark"
         // var _Blog = window._Blog || {};
         // // const currentTheme = window.localStorage && window.localStorage.getItem('theme');
