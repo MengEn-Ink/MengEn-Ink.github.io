@@ -9,30 +9,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MENGEN.INK</title>
     <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel='stylesheet' type='text/css' href='./assets/css/barrager.css'>
+
 
 </head>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if (toggleMenu.classList.contains("active")) {
-            toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        } else {
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
 
 <body class="dark-theme">
+
     <div class="wrapper">
         <div class="main">
             <div class="container">
                 <div class="intro">
                     <div class="avatar">
-                        <img src="./1.jpg">
+                        <img src="./assets/images/1.jpg" onclick="run()">
                     </div>
 
                     <div class="description">
@@ -42,6 +32,25 @@
             </div>
         </div>
     </div>
+
+    <script src="./assets/js/jquery-1.9.1.min.js"></script>
+    <script src="./assets/js/barrager.js"></script>
+
+
+    <script type="text/javascript">
+        function run() {          
+
+            var item = {
+                info: '2021年 骑的快 挣得多 没烦恼 买买买 ',
+                close: true,
+                speed: 6,
+                color: '#ffff00',
+                old_ie_color: '#ffff00',
+            }
+            $('body').barrager(item);
+
+        }
+    </script>
 </body>
 
 </html>
